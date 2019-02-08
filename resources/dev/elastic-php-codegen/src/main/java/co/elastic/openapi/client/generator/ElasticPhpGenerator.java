@@ -1,4 +1,4 @@
-package com.swiftype.codegen;
+package co.elastic.openapi.client.generator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +10,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.openapitools.codegen.CliOption;
 import org.openapitools.codegen.CodegenConfig;
 import org.openapitools.codegen.CodegenOperation;
-import org.openapitools.codegen.CodegenType;
 import org.openapitools.codegen.CodegenParameter;
+import org.openapitools.codegen.CodegenType;
 import org.openapitools.codegen.SupportingFile;
 import org.openapitools.codegen.languages.PhpClientCodegen;
 import org.openapitools.codegen.utils.ModelUtils;
@@ -20,19 +20,19 @@ import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.media.Schema;
 import io.swagger.v3.oas.models.parameters.Parameter;
 
-public class SwiftypePhpGenerator extends PhpClientCodegen implements CodegenConfig {
+public class ElasticPhpGenerator extends PhpClientCodegen implements CodegenConfig {
 
-  public static final String GENERATOR_NAME = "swiftype-php";
+  public static final String GENERATOR_NAME = "elastic-php";
   public static final String HELP_URL       = "helpUrl";
   public static final String COPYRIGHT      = "copyright";
 
-  public SwiftypePhpGenerator() {
+  public ElasticPhpGenerator() {
     super();
-    
+
     cliOptions.add(new CliOption(HELP_URL, "Help URL"));
     cliOptions.add(new CliOption(COPYRIGHT, "Copyright"));
 
-    this.setTemplateDir(SwiftypePhpGenerator.GENERATOR_NAME);
+    this.setTemplateDir(ElasticPhpGenerator.GENERATOR_NAME);
     this.setSrcBasePath("");
     this.embeddedTemplateDir = this.templateDir();
 
@@ -57,7 +57,7 @@ public class SwiftypePhpGenerator extends PhpClientCodegen implements CodegenCon
 
   @Override
   public String getName() {
-    return SwiftypePhpGenerator.GENERATOR_NAME;
+    return ElasticPhpGenerator.GENERATOR_NAME;
   }
 
   @Override
@@ -105,7 +105,7 @@ public class SwiftypePhpGenerator extends PhpClientCodegen implements CodegenCon
     CodegenParameter codegenParameter = super.fromParameter(parameter, imports);
 
     if (parameter.getExtensions() != null && parameter.getExtensions().containsKey("x-codegen-param-name")) {
-        codegenParameter.paramName = parameter.getExtensions().get("x-codegen-param-name").toString();
+      codegenParameter.paramName = parameter.getExtensions().get("x-codegen-param-name").toString();
     }
 
     return codegenParameter;

@@ -1,21 +1,21 @@
 <?php
 /**
- * This file is part of the Swiftype Common PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Tests\Unit\Connection\Handler;
+namespace Elastic\Client\Tests\Unit\Connection\Handler;
 
 use PHPUnit\Framework\TestCase;
-use Swiftype\Connection\Handler\RequestSerializationHandler;
-use Swiftype\Serializer\SmartSerializer;
+use Elastic\Client\Connection\Handler\RequestSerializationHandler;
+use Elastic\Client\Serializer\SmartSerializer;
 
 /**
  * Unit tests for the request serialization handler.
  *
- * @package Swiftype\Test\Unit\Connection\Handler
+ * @package Elastic\Client\Test\Unit\Connection\Handler
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */
@@ -65,7 +65,7 @@ class RequestSerializationHandlerTest extends TestCase
     }
 
     /**
-     * @return \Swiftype\Connection\Handler\RequestSerializationHandler
+     * @return \Elastic\Client\Connection\Handler\RequestSerializationHandler
      */
     private function getHandler()
     {
@@ -79,7 +79,7 @@ class RequestSerializationHandlerTest extends TestCase
     }
 
     /**
-     * @return \Swiftype\Serializer\SmartSerializer
+     * @return \Elastic\Client\Serializer\SmartSerializer
      */
     private function getSerializer()
     {

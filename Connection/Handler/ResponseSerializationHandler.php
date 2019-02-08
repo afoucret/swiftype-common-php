@@ -1,20 +1,20 @@
 <?php
 /**
- * This file is part of the Swiftype Common PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Connection\Handler;
+namespace Elastic\Client\Connection\Handler;
 
 use GuzzleHttp\Ring\Core;
-use Swiftype\Serializer\SerializerInterface;
+use Elastic\Client\Serializer\SerializerInterface;
 
 /**
  * Automatatic serialization of the request params and body.
  *
- * @package Swiftype\Connection\Handler
+ * @package Elastic\Client\Connection\Handler
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */

@@ -3,10 +3,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.openapitools</groupId>
-  <artifactId>swiftype-php-openapi-generator</artifactId>
+  <groupId>co.elastic.openapi.client.generator</groupId>
+  <artifactId>elastic-php-openapi-generator</artifactId>
   <packaging>jar</packaging>
-  <name>swiftype-php-openapi-generator</name>
+  <name>elastic-php-openapi-generator</name>
   <version>1.0.0</version>
   
   <properties>

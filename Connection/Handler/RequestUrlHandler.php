@@ -1,19 +1,19 @@
 <?php
 /**
- * This file is part of the Swiftype PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Connection\Handler;
+namespace Elastic\Client\Connection\Handler;
 
 use GuzzleHttp\Ring\Core;
 
 /**
  * This handler add automatically all URIs data to the request.
  *
- * @package Swiftype\Connection\Handler
+ * @package Elastic\Client\Connection\Handler
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */

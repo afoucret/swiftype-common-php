@@ -1,17 +1,17 @@
 <?php
 /**
- * This file is part of the Swiftype PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype;
+namespace Elastic\Client;
 
 /**
  * A base client builder implementation.
  *
- * @package Swiftype
+ * @package Elastic\Client
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */
@@ -28,7 +28,7 @@ abstract class AbstractClientBuilder
     private $tracer;
 
     /**
-     * @var \Swiftype\Serializer\SerializerInterface
+     * @var \Elastic\ClientSerializer\SerializerInterface
      */
     private $serializer;
 
@@ -37,13 +37,13 @@ abstract class AbstractClientBuilder
      */
     public function __construct()
     {
-        $this->serializer = new \Swiftype\Serializer\SmartSerializer();
+        $this->serializer = new \Elastic\Client\Serializer\SmartSerializer();
         $this->logger = new \Psr\Log\NullLogger();
         $this->tracer = new \Psr\Log\NullLogger();
     }
 
     /**
-     * @return \Swiftype\Serializer\SerializerInterface
+     * @return \Elastic\Client\Serializer\SerializerInterface
      */
     public function getSerializer()
     {
@@ -67,11 +67,11 @@ abstract class AbstractClientBuilder
     }
 
     /**
-     * @param \Swiftype\Serializer\SerializerInterface $serializer
+     * @param \Elastic\Client\Serializer\SerializerInterface $serializer
      *
      * @return $this
      */
-    public function setSerializer(\Swiftype\Serializer\SerializerInterface $serializer)
+    public function setSerializer(\Elastic\Client\Serializer\SerializerInterface $serializer)
     {
         $this->serializer = $serializer;
 
@@ -122,7 +122,7 @@ abstract class AbstractClientBuilder
     }
 
     /**
-     * @return \Swiftype\Connection\Connection
+     * @return \Elastic\Client\Connection\Connection
      */
     protected function getConnection()
     {
@@ -130,7 +130,7 @@ abstract class AbstractClientBuilder
     }
 
     /**
-     * @return \Swiftype\Endpoint\Builder
+     * @return \Elastic\Client\Endpoint\Builder
      */
     abstract protected function getEndpointBuilder();
 }

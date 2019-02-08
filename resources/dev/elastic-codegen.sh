@@ -14,14 +14,14 @@ esac
 echo $generatordir
 
 generatordir=$(cd $(dirname $argv0) > /dev/null && cd $generatordir > /dev/null && pwd)
-generaroimage=swiftype/swiftype-php-openapi-generator
+generaroimage=elastic/elastic-php-openapi-generator
 rootdir=`cd $(dirname $argv0)/../..; pwd`
 fixerimage="herloct/php-cs-fixer"
 echo $rootdir
 
-cd ${generatordir} && docker build --target runner -t ${generaroimage} swiftype-php-codegen
+cd ${generatordir} && docker build --target runner -t ${generaroimage} elastic-php-codegen
 
-docker run --rm -v ${rootdir}:/local ${generaroimage} generate -g swiftype-php \
+docker run --rm -v ${rootdir}:/local ${generaroimage} generate -g elastic-php \
                                                                -i /local/resources/api/api-spec.yml \
                                                                -o /local/ \
                                                                -c /local/resources/api/config.json \

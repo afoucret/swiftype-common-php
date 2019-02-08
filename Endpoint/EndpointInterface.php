@@ -1,17 +1,17 @@
 <?php
 /**
- * This file is part of the Swiftype PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Endpoint;
+namespace Elastic\Client\Endpoint;
 
 /**
  * API endpoint interface.
  *
- * @package Swiftype
+ * @package Elastic\Client
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */

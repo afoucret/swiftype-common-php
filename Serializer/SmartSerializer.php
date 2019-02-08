@@ -1,19 +1,19 @@
 <?php
 /**
- * This file is part of the Swiftype Common PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Serializer;
+namespace Elastic\Client\Serializer;
 
-use Swiftype\Exception\JsonErrorException;
+use Elastic\Client\Exception\JsonErrorException;
 
 /**
  * Default serializer used by the client.
  *
- * @package Swiftype\Serializer
+ * @package Elastic\Client\Serializer
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */

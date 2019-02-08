@@ -1,23 +1,23 @@
 <?php
 /**
- * This file is part of the Swiftype Common PHP Client package.
+ * This file is part of the Elastic PHP Client Codegen package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace Swiftype\Connection\Handler;
+namespace Elastic\Client\Connection\Handler;
 
 use GuzzleHttp\Ring\Core;
-use Swiftype\Exception\ConnectionException;
-use Swiftype\Exception\CouldNotConnectToHostException;
-use Swiftype\Exception\CouldNotResolveHostException;
-use Swiftype\Exception\OperationTimeoutException;
+use Elastic\Client\Exception\ConnectionException;
+use Elastic\Client\Exception\CouldNotConnectToHostException;
+use Elastic\Client\Exception\CouldNotResolveHostException;
+use Elastic\Client\Exception\OperationTimeoutException;
 
 /**
  * This handler manage connections errors and throw comprehensive exceptions to the user.
  *
- * @package Swiftype\Connection\Handler
+ * @package Elastic\Client\Connection\Handler
  *
  * @author  Aurélien FOUCRET <aurelien.foucret@elastic.co>
  */
